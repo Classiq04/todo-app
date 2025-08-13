@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.client
+    ports:
+      - "8080:80"
+    depends_on:
+      - server
+    networks:
+      - todo-app-network
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.server
+    ports:
+      - "3001:3001"
+    networks:
+      - todo-app-network
+
+networks:
+  todo-app-network:
+    driver: bridge
