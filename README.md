@@ -30,17 +30,15 @@ This project is designed to be easy to set up using Docker. You don't need to in
 
 1.  Clone the repository:
 
-    bash ..........
     git clone [your-repository-url]
     cd todo-app
     
 2.  Start the application:
     Use Docker Compose to build and run the containers. The `--build` flag is included to ensure the images are built from your local source code.
-
-    bash ..........
+    
     docker-compose up --build
     
-3.  Access the application:
+4.  Access the application:
     Open your web browser and navigate to `http://localhost`. The React frontend will be served by Nginx, and it will automatically communicate with the backend.
 
 
